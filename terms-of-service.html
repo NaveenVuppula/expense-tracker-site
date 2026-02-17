@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service — Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            background: #f8f9fb;
+            color: #2d3142;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #0a1628 0%, #132240 50%, #0d2b4e 100%);
+            padding: 60px 24px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(0, 217, 255, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(107, 207, 127, 0.06) 0%, transparent 40%);
+            pointer-events: none;
+        }
+        
+        .hero-icon { font-size: 48px; margin-bottom: 16px; display: inline-block; }
+        .hero h1 { font-size: 28px; font-weight: 700; color: #ffffff; margin-bottom: 8px; letter-spacing: -0.5px; }
+        .hero p { font-size: 15px; color: #8b9dc3; max-width: 480px; margin: 0 auto; }
+        .effective-date { display: inline-block; margin-top: 16px; padding: 6px 16px; background: rgba(0, 217, 255, 0.1); border: 1px solid rgba(0, 217, 255, 0.2); border-radius: 20px; font-size: 13px; color: #00d9ff; font-weight: 500; }
+        
+        .container { max-width: 720px; margin: -20px auto 40px; padding: 0 20px; position: relative; z-index: 1; }
+        
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 36px 32px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.04);
+            border: 1px solid #eef0f4;
+        }
+        
+        .card h2 { font-size: 20px; font-weight: 700; color: #0d2b4e; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .card h2 .icon { font-size: 22px; }
+        .card p { font-size: 15px; color: #4a5568; margin-bottom: 12px; }
+        .card p:last-child { margin-bottom: 0; }
+        .card ul { list-style: none; padding: 0; margin: 12px 0; }
+        .card ul li { font-size: 15px; color: #4a5568; padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid #f4f5f7; }
+        .card ul li:last-child { border-bottom: none; }
+        .card ul li::before { content: '→'; position: absolute; left: 4px; color: #00d9ff; font-weight: 600; }
+        strong { color: #2d3142; font-weight: 600; }
+        
+        .highlight-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px 20px; margin: 16px 0; }
+        .highlight-box p { color: #166534; font-weight: 500; font-size: 14px; margin: 0; }
+        
+        .footer { text-align: center; padding: 30px 24px 40px; color: #8b9dc3; font-size: 13px; }
+        .footer a { color: #00d9ff; text-decoration: none; }
+        .nav-links { display: flex; justify-content: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+        .nav-links a { padding: 6px 14px; background: #f0f2f5; border-radius: 8px; font-size: 13px; color: #4a5568; text-decoration: none; }
+        
+        @media (max-width: 600px) { .card { padding: 24px 20px; } .hero h1 { font-size: 24px; } }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-icon">📄</div>
+    <h1>Terms of Service</h1>
+    <p>Expense Tracker by Naveen Vuppula</p>
+    <div class="effective-date">Effective: February 17, 2026</div>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2><span class="icon">📌</span> Agreement to Terms</h2>
+        <p>By downloading, installing, or using Expense Tracker ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">💡</span> Description of Service</h2>
+        <p>Expense Tracker is a personal finance management application that allows you to:</p>
+        <ul>
+            <li>Track and categorize personal expenses</li>
+            <li>Set and monitor monthly budgets</li>
+            <li>Scan receipts using your device camera</li>
+            <li>View spending analytics and insights</li>
+            <li>Export expense data as CSV files</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">👤</span> User Accounts</h2>
+        <p>To use the App, you must create an account using your email address or sign in via Google or Apple. You are responsible for:</p>
+        <ul>
+            <li>Maintaining the confidentiality of your account credentials</li>
+            <li>All activities that occur under your account</li>
+            <li>Providing accurate and complete information during registration</li>
+            <li>Notifying us immediately of any unauthorized use of your account</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">✅</span> Acceptable Use</h2>
+        <p>You agree to use the App only for lawful purposes and in accordance with these Terms. You agree NOT to:</p>
+        <ul>
+            <li>Use the App for any illegal or unauthorized purpose</li>
+            <li>Attempt to gain unauthorized access to any part of the App or its systems</li>
+            <li>Interfere with or disrupt the App's infrastructure</li>
+            <li>Reverse engineer, decompile, or disassemble the App</li>
+            <li>Use automated systems to access the App (bots, scrapers, etc.)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">📊</span> Your Data</h2>
+        <p>You retain ownership of all financial data you enter into the App. We do not claim ownership of your expense records, categories, budgets, or any other content you create.</p>
+        <p>You can export or delete your data at any time. When you delete your account, all associated data is permanently removed from our servers.</p>
+        <p>For details on how we handle your data, please refer to our <a href="privacy-policy.html" style="color: #00d9ff; text-decoration: none;">Privacy Policy</a>.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">💰</span> Pricing</h2>
+        <p>Expense Tracker is currently offered as a <strong>free application</strong> with no in-app purchases or subscription fees. We reserve the right to introduce paid features in the future, but any existing free features at the time of introduction will remain free.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">⚠️</span> Disclaimers</h2>
+        <p>The App is provided "as is" and "as available" without warranties of any kind, either express or implied.</p>
+        <ul>
+            <li>We do not guarantee the App will be error-free or uninterrupted</li>
+            <li>The App is not a substitute for professional financial, tax, or accounting advice</li>
+            <li>We are not responsible for any financial decisions made based on data in the App</li>
+            <li>Receipt scanning accuracy depends on image quality and may not always be correct</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">🔒</span> Limitation of Liability</h2>
+        <p>To the maximum extent permitted by law, Naveen Vuppula and Expense Tracker shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, revenue, or profits, arising from your use of the App.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">🚫</span> Account Termination</h2>
+        <p>You may delete your account at any time from within the App (Settings → Delete Account). We reserve the right to suspend or terminate accounts that violate these Terms or engage in abusive behavior.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">📝</span> Changes to Terms</h2>
+        <p>We may update these Terms from time to time. When we do, we will revise the "Effective" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated Terms.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">📬</span> Contact Us</h2>
+        <p>If you have any questions about these Terms, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:naveen90.v@gmail.com" style="color: #00d9ff; text-decoration: none;">naveen90.v@gmail.com</a></p>
+        <p><strong>Developer:</strong> Naveen Vuppula</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>© 2026 Expense Tracker by Naveen Vuppula. All rights reserved.</p>
+    <div class="nav-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="#top">Back to top</a>
+    </div>
+</div>
+
+</body>
+</html>

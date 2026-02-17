@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            background: #f8f9fb;
+            color: #2d3142;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #0a1628 0%, #132240 50%, #0d2b4e 100%);
+            padding: 60px 24px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(0, 217, 255, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(107, 207, 127, 0.06) 0%, transparent 40%);
+            pointer-events: none;
+        }
+        
+        .hero-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+        
+        .hero h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero p {
+            font-size: 15px;
+            color: #8b9dc3;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        
+        .effective-date {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 6px 16px;
+            background: rgba(0, 217, 255, 0.1);
+            border: 1px solid rgba(0, 217, 255, 0.2);
+            border-radius: 20px;
+            font-size: 13px;
+            color: #00d9ff;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: -20px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 36px 32px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.04);
+            border: 1px solid #eef0f4;
+        }
+        
+        .card h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0d2b4e;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card h2 .icon {
+            font-size: 22px;
+        }
+        
+        .card p {
+            font-size: 15px;
+            color: #4a5568;
+            margin-bottom: 12px;
+        }
+        
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0;
+        }
+        
+        .card ul li {
+            font-size: 15px;
+            color: #4a5568;
+            padding: 8px 0 8px 28px;
+            position: relative;
+            border-bottom: 1px solid #f4f5f7;
+        }
+        
+        .card ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .card ul li::before {
+            content: '→';
+            position: absolute;
+            left: 4px;
+            color: #00d9ff;
+            font-weight: 600;
+        }
+        
+        .highlight-box {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+        
+        .highlight-box p {
+            color: #166534;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        .highlight-box .icon {
+            margin-right: 6px;
+        }
+        
+        .warning-box {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+        
+        .warning-box p {
+            color: #1e40af;
+            font-weight: 500;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        strong {
+            color: #2d3142;
+            font-weight: 600;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 24px 40px;
+            color: #8b9dc3;
+            font-size: 13px;
+        }
+        
+        .footer a {
+            color: #00d9ff;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            padding: 6px 14px;
+            background: #f0f2f5;
+            border-radius: 8px;
+            font-size: 13px;
+            color: #4a5568;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        
+        .nav-links a:hover {
+            background: #e2e8f0;
+        }
+        
+        @media (max-width: 600px) {
+            .card { padding: 24px 20px; }
+            .hero h1 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-icon">💰</div>
+    <h1>Privacy Policy</h1>
+    <p>Expense Tracker by Naveen Vuppula</p>
+    <div class="effective-date">Effective: February 17, 2026</div>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2><span class="icon">👋</span> Overview</h2>
+        <p>Expense Tracker ("the App") is developed and operated by Naveen Vuppula. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application.</p>
+        <div class="highlight-box">
+            <p><span class="icon">🛡️</span> We believe in privacy by design. We collect only what's necessary to provide you with a great expense tracking experience. We do not sell your data. We do not show ads.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">📋</span> Information We Collect</h2>
+        <p><strong>Account Information</strong></p>
+        <ul>
+            <li><strong>Email address</strong> — used as your account identifier for login and password recovery</li>
+            <li><strong>Name</strong> — used to personalize your experience within the app</li>
+            <li><strong>Profile picture</strong> (optional) — uploaded by you to personalize your profile</li>
+        </ul>
+        <p><strong>Financial Data You Enter</strong></p>
+        <ul>
+            <li><strong>Expense records</strong> — amounts, descriptions, dates, and categories you create</li>
+            <li><strong>Budget settings</strong> — monthly budget amounts per category</li>
+            <li><strong>Categories</strong> — custom categories you create or modify</li>
+            <li><strong>Receipt images</strong> — photos you scan for automatic expense entry (processed by Google Cloud Vision API for text extraction, not stored permanently)</li>
+        </ul>
+        <p><strong>Automatically Collected</strong></p>
+        <ul>
+            <li><strong>Device locale/region</strong> — to auto-detect your preferred currency</li>
+            <li><strong>Authentication tokens</strong> — to keep you securely logged in</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">🔧</span> How We Use Your Information</h2>
+        <ul>
+            <li><strong>Provide the service</strong> — store and display your expenses, budgets, and analytics</li>
+            <li><strong>Authentication</strong> — verify your identity and secure your account</li>
+            <li><strong>Receipt scanning</strong> — extract text from receipt photos to auto-fill expense details</li>
+            <li><strong>Currency detection</strong> — display amounts in your local currency</li>
+            <li><strong>Data export</strong> — generate CSV files of your expense data when you request it</li>
+        </ul>
+        <div class="highlight-box">
+            <p><span class="icon">✅</span> We do NOT use your data for advertising, profiling, analytics tracking, or any purpose beyond providing you with the app's features.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">🔐</span> Data Storage & Security</h2>
+        <p>Your data is stored securely using Amazon Web Services (AWS):</p>
+        <ul>
+            <li><strong>Authentication</strong> — managed by AWS Cognito with industry-standard encryption</li>
+            <li><strong>Expense data</strong> — stored in AWS DynamoDB with encryption at rest</li>
+            <li><strong>Profile pictures</strong> — stored in AWS S3 with server-side encryption</li>
+            <li><strong>All data transmission</strong> — encrypted via HTTPS/TLS</li>
+        </ul>
+        <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">🤝</span> Third-Party Services</h2>
+        <p>The App uses the following third-party services:</p>
+        <ul>
+            <li><strong>Amazon Web Services (AWS)</strong> — cloud infrastructure, authentication (Cognito), database (DynamoDB), and file storage (S3)</li>
+            <li><strong>Google Cloud Vision API</strong> — processes receipt images for text extraction (images are sent to Google's servers for processing but are not stored by Google)</li>
+            <li><strong>Google Sign-In</strong> — optional authentication method</li>
+            <li><strong>Apple Sign-In</strong> — optional authentication method</li>
+        </ul>
+        <p>Each third-party service operates under their own privacy policy. We encourage you to review their respective policies.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">🌍</span> Data Sharing</h2>
+        <div class="highlight-box">
+            <p><span class="icon">🚫</span> We do NOT sell, rent, or share your personal data with any third parties for marketing or advertising purposes. Ever.</p>
+        </div>
+        <p>Your data may only be disclosed:</p>
+        <ul>
+            <li>To comply with legal obligations or valid legal processes</li>
+            <li>To protect our rights, privacy, safety, or property</li>
+            <li>In connection with a merger, acquisition, or sale of assets (you would be notified)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">🎛️</span> Your Rights & Choices</h2>
+        <ul>
+            <li><strong>Access your data</strong> — view all your expenses, categories, and budgets within the app at any time</li>
+            <li><strong>Export your data</strong> — download your expense data as a CSV file from the app</li>
+            <li><strong>Update your data</strong> — edit or delete any expense, category, or budget within the app</li>
+            <li><strong>Delete your account</strong> — permanently delete your account and all associated data from within the app (Settings → Delete Account)</li>
+            <li><strong>Change authentication</strong> — manage your sign-in method through the app</li>
+        </ul>
+        <div class="warning-box">
+            <p>⚠️ Account deletion is permanent. Once deleted, your data cannot be recovered.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">👶</span> Children's Privacy</h2>
+        <p>The App is not directed at children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us and we will delete such information.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">📝</span> Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Effective" date at the top of this page. We encourage you to review this Privacy Policy periodically for any changes. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="card">
+        <h2><span class="icon">📬</span> Contact Us</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact us at:</p>
+        <p><strong>Email:</strong> <a href="mailto:naveen90.v@gmail.com" style="color: #00d9ff; text-decoration: none;">naveen90.v@gmail.com</a></p>
+        <p><strong>Developer:</strong> Naveen Vuppula</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>© 2026 Expense Tracker by Naveen Vuppula. All rights reserved.</p>
+    <div class="nav-links">
+        <a href="#top">Back to top</a>
+    </div>
+</div>
+
+</body>
+</html>
