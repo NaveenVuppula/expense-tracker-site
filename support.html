@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'DM Sans', -apple-system, sans-serif; background: #f8f9fb; color: #2d3142; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        .hero { background: linear-gradient(135deg, #0a1628 0%, #132240 50%, #0d2b4e 100%); padding: 60px 24px 50px; text-align: center; }
+        .hero-icon { font-size: 48px; margin-bottom: 16px; display: inline-block; }
+        .hero h1 { font-size: 28px; font-weight: 700; color: #ffffff; margin-bottom: 8px; }
+        .hero p { font-size: 15px; color: #8b9dc3; max-width: 480px; margin: 0 auto; }
+        .container { max-width: 720px; margin: -20px auto 40px; padding: 0 20px; position: relative; z-index: 1; }
+        .card { background: #ffffff; border-radius: 16px; padding: 36px 32px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.04); border: 1px solid #eef0f4; }
+        .card h2 { font-size: 20px; font-weight: 700; color: #0d2b4e; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+        .card p { font-size: 15px; color: #4a5568; margin-bottom: 12px; }
+        .card p:last-child { margin-bottom: 0; }
+        .card ul { list-style: none; padding: 0; margin: 12px 0; }
+        .card ul li { font-size: 15px; color: #4a5568; padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid #f4f5f7; }
+        .card ul li:last-child { border-bottom: none; }
+        .card ul li::before { content: '→'; position: absolute; left: 4px; color: #00d9ff; font-weight: 600; }
+        strong { color: #2d3142; font-weight: 600; }
+        a { color: #00d9ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .email-btn { display: inline-block; margin-top: 12px; padding: 12px 28px; background: #00d9ff; color: #ffffff; border-radius: 10px; font-weight: 600; font-size: 16px; text-decoration: none; }
+        .email-btn:hover { background: #00c4e6; text-decoration: none; }
+        .footer { text-align: center; padding: 30px 24px 40px; color: #8b9dc3; font-size: 13px; }
+        .nav-links { display: flex; justify-content: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
+        .nav-links a { padding: 6px 14px; background: #f0f2f5; border-radius: 8px; font-size: 13px; color: #4a5568; text-decoration: none; }
+        @media (max-width: 600px) { .card { padding: 24px 20px; } .hero h1 { font-size: 24px; } }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="hero-icon">🛟</div>
+    <h1>Support</h1>
+    <p>Expense Tracker by Naveen Vuppula</p>
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2><span>📬</span> Contact Us</h2>
+        <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.</p>
+        <p><strong>Email:</strong> <a href="mailto:naveen90.v@gmail.com">naveen90.v@gmail.com</a></p>
+        <a href="mailto:naveen90.v@gmail.com?subject=Expense%20Tracker%20Support" class="email-btn">Send Email</a>
+    </div>
+
+    <div class="card">
+        <h2><span>❓</span> Frequently Asked Questions</h2>
+        <ul>
+            <li><strong>How do I reset my password?</strong> — Tap "Forgot Password?" on the login screen, enter your email, and follow the instructions sent to your inbox.</li>
+            <li><strong>How do I scan a receipt?</strong> — Tap the + button, then "Scan Receipt." Point your camera at the receipt and the app will automatically extract the amount and details.</li>
+            <li><strong>How do I change my currency?</strong> — The app auto-detects your currency based on your device region. To change it, go to your device Settings → General → Language & Region → Region.</li>
+            <li><strong>How do I export my data?</strong> — Go to Profile → Export to CSV. This downloads all your expense data as a spreadsheet file.</li>
+            <li><strong>How do I delete my account?</strong> — Go to Profile → Delete Account. This permanently removes your account and all associated data. This action cannot be undone.</li>
+            <li><strong>I signed in with Google/Apple and can't delete my account.</strong> — For social login accounts, tap Delete Account and follow the on-screen instructions. You'll be signed out and your data will be removed.</li>
+            <li><strong>Is my data secure?</strong> — Yes. All data is encrypted in transit (HTTPS) and at rest (AWS encryption). We never sell or share your data.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2><span>📱</span> App Information</h2>
+        <p><strong>Version:</strong> 1.0.0</p>
+        <p><strong>Platforms:</strong> iOS, Android</p>
+        <p><strong>Developer:</strong> Naveen Vuppula</p>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>© 2026 Expense Tracker by Naveen Vuppula. All rights reserved.</p>
+    <div class="nav-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+    </div>
+</div>
+
+</body>
+</html>
