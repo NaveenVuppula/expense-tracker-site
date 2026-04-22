@@ -217,6 +217,10 @@
             .card { padding: 24px 20px; }
             .hero h1 { font-size: 24px; }
         }
+
+        .scroll-top { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; background: #00d9ff; color: #000; border: none; border-radius: 14px; cursor: pointer; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,217,255,0.3); opacity: 0; transform: translateY(20px); transition: all 0.3s; z-index: 99; pointer-events: none; }
+        .scroll-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .scroll-top:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,217,255,0.4); }
     </style>
 </head>
 <body>
@@ -347,9 +351,14 @@
 <div class="footer">
     <p>© 2026 Expense Tracker by Naveen Vuppula. All rights reserved.</p>
     <div class="nav-links">
-        <a href="#top">Back to top</a>
+        <a href="index.html">Home</a>
+        <a href="terms-of-service.html">Terms of Service</a>
+        <a href="support.html">Support</a>
     </div>
 </div>
+
+<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+<script>const scrollBtn=document.querySelector('.scroll-top');window.addEventListener('scroll',()=>{scrollBtn.classList.toggle('visible',window.scrollY>400)})</script>
 
 </body>
 </html>

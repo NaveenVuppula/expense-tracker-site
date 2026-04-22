@@ -30,6 +30,10 @@
         .nav-links { display: flex; justify-content: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; }
         .nav-links a { padding: 6px 14px; background: #f0f2f5; border-radius: 8px; font-size: 13px; color: #4a5568; text-decoration: none; }
         @media (max-width: 600px) { .card { padding: 24px 20px; } .hero h1 { font-size: 24px; } }
+
+        .scroll-top { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; background: #00d9ff; color: #000; border: none; border-radius: 14px; cursor: pointer; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(0,217,255,0.3); opacity: 0; transform: translateY(20px); transition: all 0.3s; z-index: 99; pointer-events: none; }
+        .scroll-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .scroll-top:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,217,255,0.4); }
     </style>
 </head>
 <body>
@@ -64,7 +68,7 @@
 
     <div class="card">
         <h2><span>📱</span> App Information</h2>
-        <p><strong>Version:</strong> 1.0.0</p>
+        <p><strong>Version:</strong> 1.2.1</p>
         <p><strong>Platforms:</strong> iOS, Android</p>
         <p><strong>Developer:</strong> Naveen Vuppula</p>
     </div>
@@ -74,10 +78,14 @@
 <div class="footer">
     <p>© 2026 Expense Tracker by Naveen Vuppula. All rights reserved.</p>
     <div class="nav-links">
+        <a href="index.html">Home</a>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
     </div>
 </div>
+
+<button class="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">↑</button>
+<script>const scrollBtn=document.querySelector('.scroll-top');window.addEventListener('scroll',()=>{scrollBtn.classList.toggle('visible',window.scrollY>400)})</script>
 
 </body>
 </html>
